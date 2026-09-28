@@ -1,0 +1,12 @@
+[
+  "Which fridges have no recorded check today at their own site?",
+  "Which food measurements need a supervisor review?",
+  "Which cooling batches missed a checkpoint or the default time limit?",
+  "Which cleaning jobs are overdue and who owns them?",
+  "Which suppliers have held or rejected deliveries and an overdue review?",
+  "Which batch identifiers belong to held deliveries?",
+  "Which sites lack current supervisor certificate evidence?",
+  "Which active staff have no recorded training evidence?",
+  "Which records have a retention date below the three-month floor?",
+  "What should each site manager follow up this Monday?"
+]

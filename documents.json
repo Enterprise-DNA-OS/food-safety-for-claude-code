@@ -1,11 +1,64 @@
 [
   {
-    "name": "example",
-    "title": "TODO(author): the first document this industry must produce",
-    "for_each": "select gen_random_uuid() as id, 'Example' as name",
-    "file": "name",
+    "name": "inspection-pack",
+    "title": "DRAFT inspection record pack",
+    "for_each": "select id,name from sites order by name",
+    "file": "id",
     "sections": [
-      { "title": "Details", "sql": "select 'replace me' as item, $1::text as record_id" }
+      {
+        "title": "Temperature and cooling",
+        "sql": "select * from v_temperature_review where site_id=$1",
+        "note": "Fictional in demo mode. Record review only. Review evidence and local requirements before sharing."
+      },
+      {
+        "title": "Staff training",
+        "sql": "select * from v_training where site_id=$1",
+        "note": "Fictional in demo mode. Record review only. Review evidence and local requirements before sharing."
+      },
+      {
+        "title": "Record checks",
+        "sql": "select * from v_compliance where site_id=$1",
+        "note": "Fictional in demo mode. Record review only. Review evidence and local requirements before sharing."
+      }
+    ]
+  },
+  {
+    "name": "cleaning-register",
+    "title": "Cleaning and sanitising register",
+    "for_each": "select id,name from sites order by name",
+    "file": "id",
+    "sections": [
+      {
+        "title": "Scheduled and completed work",
+        "sql": "select name,due_at,completed_at,operator,method,evidence_ref from cleaning where site_id=$1 order by due_at",
+        "note": "Fictional in demo mode. Record review only. Review evidence and local requirements before sharing."
+      }
+    ]
+  },
+  {
+    "name": "corrective-actions",
+    "title": "Corrective action register",
+    "for_each": "select id,name from sites order by name",
+    "file": "id",
+    "sections": [
+      {
+        "title": "Actions and resolutions",
+        "sql": "select name,owner,due_at,closed_at,resolution,evidence_ref from actions where site_id=$1 order by due_at",
+        "note": "Fictional in demo mode. Record review only. Review evidence and local requirements before sharing."
+      }
+    ]
+  },
+  {
+    "name": "delivery-register",
+    "title": "Delivery and batch register",
+    "for_each": "select id,name from sites order by name",
+    "file": "id",
+    "sections": [
+      {
+        "title": "Receipt records",
+        "sql": "select d.name,d.batch,s.name as supplier,d.received_at,d.temperature_c,d.state,d.operator from deliveries d join suppliers s on s.id=d.supplier_id where d.site_id=$1 order by received_at",
+        "note": "Fictional in demo mode. Record review only. Review evidence and local requirements before sharing."
+      }
     ]
   }
 ]

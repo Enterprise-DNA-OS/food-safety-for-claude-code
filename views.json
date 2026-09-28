@@ -1,13 +1,39 @@
 [
   {
     "name": "week",
-    "title": "This week",
-    "subtitle": "Food Safety for Claude Code: what needs attention, rendered by npm run view",
+    "title": "Kitchen opening and corrective actions",
     "sections": [
       {
-        "title": "Needs attention",
-        "note": "TODO(author): point this at the industry's attention view (overdue, stuck, quiet).",
-        "sql": "select 'replace me' as item, 'TODO(author)' as why"
+        "title": "Opening records",
+        "sql": "select * from v_opening"
+      },
+      {
+        "title": "Overdue work",
+        "sql": "select * from v_attention"
+      }
+    ]
+  },
+  {
+    "name": "temperature",
+    "title": "Temperature and cooling review",
+    "sections": [
+      {
+        "title": "Recorded measurements",
+        "sql": "select * from v_temperature_review"
+      }
+    ]
+  },
+  {
+    "name": "people",
+    "title": "Training and supplier review",
+    "sections": [
+      {
+        "title": "Training evidence",
+        "sql": "select * from v_training"
+      },
+      {
+        "title": "Supplier history",
+        "sql": "select * from v_supplier_review"
       }
     ]
   }

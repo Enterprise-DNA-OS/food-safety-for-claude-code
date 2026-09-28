@@ -1,0 +1,13 @@
+{
+  "files": [
+    {
+      "file": "suppliers.csv",
+      "entity": "suppliers",
+      "key": "Supplier ID",
+      "columns": {
+        "Supplier Name": "name",
+        "Contact": "contact"
+      }
+    }
+  ]
+}
