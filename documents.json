@@ -8,17 +8,35 @@
       {
         "title": "Temperature and cooling",
         "sql": "select * from v_temperature_review where site_id=$1",
-        "note": "Fictional in demo mode. Record review only. Review evidence and local requirements before sharing."
+        "note": "Fictional in demo mode. Record review only. Review evidence and local requirements before sharing.",
+        "columns": [
+          "food",
+          "kind",
+          "observed_at",
+          "temperature_c",
+          "finding",
+          "operator"
+        ]
       },
       {
         "title": "Staff training",
         "sql": "select * from v_training where site_id=$1",
-        "note": "Fictional in demo mode. Record review only. Review evidence and local requirements before sharing."
+        "note": "Fictional in demo mode. Record review only. Review evidence and local requirements before sharing.",
+        "columns": [
+          "name",
+          "training",
+          "supervisor_review"
+        ]
       },
       {
         "title": "Record checks",
         "sql": "select * from v_compliance where site_id=$1",
-        "note": "Fictional in demo mode. Record review only. Review evidence and local requirements before sharing."
+        "note": "Fictional in demo mode. Record review only. Review evidence and local requirements before sharing.",
+        "columns": [
+          "rule",
+          "item",
+          "finding"
+        ]
       }
     ]
   },

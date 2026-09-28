@@ -5,11 +5,25 @@
     "sections": [
       {
         "title": "Opening records",
-        "sql": "select * from v_opening"
+        "sql": "select * from v_opening",
+        "columns": [
+          "site",
+          "equipment",
+          "kind",
+          "last_check",
+          "finding"
+        ]
       },
       {
         "title": "Overdue work",
-        "sql": "select * from v_attention"
+        "sql": "select * from v_attention",
+        "columns": [
+          "site",
+          "kind",
+          "item",
+          "owner",
+          "due_at"
+        ]
       }
     ]
   },
@@ -19,7 +33,15 @@
     "sections": [
       {
         "title": "Recorded measurements",
-        "sql": "select * from v_temperature_review"
+        "sql": "select * from v_temperature_review",
+        "columns": [
+          "site",
+          "food",
+          "kind",
+          "temperature_c",
+          "finding",
+          "operator"
+        ]
       }
     ]
   },
@@ -29,11 +51,23 @@
     "sections": [
       {
         "title": "Training evidence",
-        "sql": "select * from v_training"
+        "sql": "select * from v_training",
+        "columns": [
+          "site",
+          "name",
+          "training",
+          "supervisor_review"
+        ]
       },
       {
         "title": "Supplier history",
-        "sql": "select * from v_supplier_review"
+        "sql": "select * from v_supplier_review",
+        "columns": [
+          "name",
+          "approval_due",
+          "deliveries",
+          "held_or_rejected"
+        ]
       }
     ]
   }
