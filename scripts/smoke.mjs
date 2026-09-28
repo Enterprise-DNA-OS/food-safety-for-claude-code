@@ -29,7 +29,7 @@ try{
  assert.equal((await run(['temperature-review'])).length,4);
  assert.equal((await run(['cooling-review']))[0].finding,'REVIEW cooling time');
  assert.equal((await run(['delivery-review']))[0].batch,'MILK-628');
- assert.equal((await run(['supplier-review']))[0].held_or_rejected,1);
+ assert.equal(Number((await run(['supplier-review']))[0].held_or_rejected),1);
  assert.ok((await run(['training-review'])).some(r=>r.supervisor_review==='Certificate older than five years'));
  assert.ok((await run(['compliance'])).some(r=>r.rule==='AU-FSS'&&r.item==='Market Counter'));
  assert.ok((await run(['weekly-review'])).attention.length===3);
