@@ -6,7 +6,7 @@ Temperature records, cooling checks, cleaning, deliveries and corrective actions
 | --- | --- | --- |
 | Free source. Follow the quick start. | Your food-safety records, rules, Safe Food Pro mapping, reports, phone interface or different stack. | Installed, connected and operated through Omni. One setup fee, then a retainer. |
 
-[Talk to Sam](https://enterprisedna.co/omni/book?offer=replace-software&utm_campaign=safe-food-pro&utm_medium=readme) · [Instead of Safe Food Pro](https://enterprisedna.co/omni/instead-of/safe-food-pro)
+[Talk to Sam](https://enterprisedna.co/omni/book?offer=replace-software&utm_campaign=safe-food-pro&utm_medium=readme) · [Instead of Safe Food Pro](https://enterprisedna.co/omni/instead-of/safe-food-pro?utm_source=github&utm_medium=readme&utm_campaign=safe-food-pro)
 
 Works with Claude Code, Codex, OpenCode or Cursor. Read AGENTS.md and CLAUDE.md.
 
